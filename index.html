@@ -2,30 +2,187 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Projet</title>
     
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Fontawesome -->
-    <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/@fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- Styles personnalisés -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
 </head>
 <body>
     <!-- Début du Header-->
     <header>
-        <!-- Début de la NavBar -->
-        <nav>
+        <div>
+            <h1 class="text-center py-3 pt-5">emporium.</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light ">
 
-        </nav>
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand d-none" href="#">emporium.
+                </a>
+                
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 monModeNuit">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">PRODUCT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">BLOG</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">ELEMENTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
+                  </li>
+                  <!-- mode nuit -->
+                  <li id="modeNuit">
+                        <input type="checkbox" class="checkbox" id="checkbox">
+                        <label for="checkbox" class="label">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </li>
+                    <li>
+                        <button id="monBtn">CONNEXION</button>
+                    </li>
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
         <!-- Fin du NavBar -->
     </header>
     <!-- Fin du Header -->
 
     <!-- Début du Main-->
     <main>
+        <section class="container-fluid monFluid ">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container m-5">
+                           <span id="maFontSection1" class="text-danger">Shop at</span>
+                           <p id="maFontSection2" >emporium.</p> 
+                           <p class="text-secondary">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my.</p>
+                           <button type="button" class="btn btn-danger monBtnSale"><span id="monSale">SALE ITEMS</span></button>
 
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="./public/img/slider-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--  living-sale-clothes -->
+        <section class="section2 container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="firstImg monCentrage">
+                        <h3 class="text-white text-center border-bottom border-2 w-75 ">Living Room</h3>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="secondImg monCentrage">
+                        <h3 class="text-white text-center border-bottom border-2 w-75  ">Living Room</h3>
+                
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="thirdImg monCentrage ">
+                        <h3 class="text-white text-center border-bottom border-2 w-75 ">Living Room</h3>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <!-- Recents products -->
+        <section class="section3">
+            <div class="container">
+                <p class="mt-5 mb-5 text-center "><b>Recents Products</b></p>
+                <div class="row">
+                    <div class="col-sm-4 monAfter">
+                        <img class="img-fluid mb-3  imgGlove" src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                        <p class="text-center "> Luxury Sofa</p>
+                        <p class="text-center mb-5"><span class="text-danger">$600.00</span></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-fluid mb-3" src="./public/img/products_mini/product-gloves.jpg" alt="">
+                        <p class="text-center ">Leather Gloves</p>
+                        <p class="text-center mb-5 "> <span class="maPastille">SALE!</span> <span class="text-secondary
+                            monPrix">$34.00</span><span class="text-danger">$27.00</span></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img class="img-fluid mb-3" src="./public/img/products_mini/product-cups.jpg" alt="">
+                        <p class="text-center ">Colorful Bowl</p>
+                        <p class="text-center mb-5"><span class="text-danger">$18.00</span></p>
+                    </div>
+                </div>
+                
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-bag.jpg" alt="">
+                            <p class="text-center "> Women Bag</p>
+                            <p class="text-center mb-5 "> <span class="maPastille">SALE!</span> <span class="text-secondary
+                                monPrix">*420.00</span><span class="text-danger">$350.00</span></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                            <p class="text-center ">Minimal T-shirt</p>
+                        <p class="text-center mb-5"><span class="text-danger">$15.00</span></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-plates.jpg" alt="">
+                            <p class="text-center ">Plates Set</p>
+                        <p class="text-center mb-5"><span class="text-danger">$30.00</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                            <p class="text-center ">Modern Sofa</p>
+                        <p class="text-center mb-5"><span class="text-danger">$900.00</span></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-bed.jpg" alt="">
+                            <p class="text-center ">Bed Linen</p>
+                        <p class="text-center mb-5"><span class="text-danger">$79.00</span></p>
+                        </div>
+                        <div class="col-sm-4">
+                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-shoes.jpg" alt="">
+                            <p class="text-center ">Minimal Shoes</p>
+                        <p class="text-center mb-5"><span class="text-danger">$60.00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section3">
+            <div class="maSection3">
+                <div class="monH3sec3">
+                    <h3 class="text-white maFontH3">Discover Thousands Of Great Products</h3>
+                </div>
+                <div class="monbtnsec3">
+                    <button type="button" class="btn btn-danger">LEARN MORE</button>
+                </div>
+            </div>
+        </section>
+
+        
     </main>
     <!-- Fin du Main-->
 
@@ -37,11 +194,11 @@
 
     <!-- Début du Scripts -->
     
-    <script type="application/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
     
-    <script type="application/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./assets/js/index.js"></script>
-    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./public/js/index.js"></script>
+    <script type="module" src="./public/js/main.js"></script>
     <!-- Fin du Scripts -->
 </body>
 </html>

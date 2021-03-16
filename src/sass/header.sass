@@ -1,0 +1,58 @@
+h1
+    font-size: 55px
+li
+    margin-right: 25px
+    margin-top: 40px
+// mon mode nuit
+.label
+    height: 26px
+    width: 50px
+    background-color: black
+    display: flex
+    border-radius: 50px
+    position: relative
+    /* padding: 5px; */
+i
+    margin: auto  
+
+.fa-moon
+    color: rgb(240, 146, 13)
+
+.fa-sun
+    color: red
+
+#modeNuit
+    display: flex
+    
+
+.checkbox
+    opacity: 0
+    position: absolute
+
+.checkbox:checked + .label .ball
+    transform: translateX(23px)
+
+.ball
+    width: 22px
+    height: 22px
+    background-color: black 
+    position: absolute
+    top: 2px
+    left: 2px
+    border-radius: 50%
+    transition: 0.5s
+
+.dark
+    color: white
+    backdrop-filter: brightness(45%)
+    /* background-color: rgba(0, 0, 0, 0.448); */
+
+
+    // le bouton connexion
+#monBtn
+    height: 25px
+    margin: auto
+    background-color: #5e5b5b
+    color: white
+    font-size: 8px
+    
