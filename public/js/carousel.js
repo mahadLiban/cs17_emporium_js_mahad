@@ -50,5 +50,35 @@ indicator[3].addEventListener('click',()=>{
 
 }) 
 
+indicator[4].addEventListener('click',()=>{
+    slides[0].style.transform ='translateX(-600%)'
+    slides[1].style.transform ='translateX(-450%)'
+    slides[2].style.transform ='translateX(-300%)'
+    slides[3].style.transform ='translateX(-150%)'
+    slides[4].style.transform ='translateX(0%)'
+    slides[5].style.transform ='translateX(150%)'
+    slides[6].style.transform ='translateX(300%)'
+
+}) 
+indicator[5].addEventListener('click',()=>{
+    slides[0].style.transform ='translateX(-750%)'
+    slides[1].style.transform ='translateX(-600%)'
+    slides[2].style.transform ='translateX(-450%)'
+    slides[3].style.transform ='translateX(-300%)'
+    slides[4].style.transform ='translateX(-150%)'
+    slides[5].style.transform ='translateX(0%)'
+    slides[6].style.transform ='translateX(150%)'
+
+}) 
+indicator[6].addEventListener('click',()=>{
+    slides[0].style.transform ='translateX(-900%)'
+    slides[1].style.transform ='translateX(-750%)'
+    slides[2].style.transform ='translateX(-600%)'
+    slides[3].style.transform ='translateX(-450%)'
+    slides[4].style.transform ='translateX(-300%)'
+    slides[5].style.transform ='translateX(-150%)'
+    slides[6].style.transform ='translateX(0%)'
+
+}) 
 
 export{slides, voirSlides, indicator, voir};

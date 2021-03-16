@@ -10682,9 +10682,8 @@ i {
 }
 
 .dark {
-  color: white;
-  backdrop-filter: brightness(45%);
-  /* background-color: rgba(0, 0, 0, 0.448); */
+  color: gold;
+  background-color: black;
 }
 
 #monBtn {
@@ -10693,6 +10692,24 @@ i {
   background-color: #5e5b5b;
   color: white;
   font-size: 8px;
+}
+
+.okSaid {
+  background-color: #353a40;
+}
+
+.monPcouleur {
+  color: #436176;
+}
+
+.mesH4 {
+  padding: 40px;
+}
+
+.basFooter {
+  height: 80px;
+  background-color: black;
+  width: 100%;
 }
 
 .monFluid {
@@ -11140,7 +11157,6 @@ i {
   border: 1px solid black;
   border-radius: 50px;
   position: relative;
-  margin: 0 30px;
 }
 @media screen and (max-width: 1025px) {
   .lesBoutons1 {
@@ -11160,7 +11176,6 @@ i {
 @media screen and (max-width: 569px) {
   .lesBoutons1 {
     font-size: 20px;
-    margin-top: 10px;
   }
 }
 
@@ -11169,7 +11184,6 @@ i {
   border: 1px solid black;
   border-radius: 50px;
   position: relative;
-  margin: 0 30px;
 }
 @media screen and (max-width: 1025px) {
   .lesBoutons2 {
@@ -11189,7 +11203,6 @@ i {
 @media screen and (max-width: 569px) {
   .lesBoutons2 {
     font-size: 20px;
-    margin-top: 10px;
   }
 }
 
@@ -11198,7 +11211,6 @@ i {
   border: 1px solid black;
   border-radius: 50px;
   position: relative;
-  margin: 0 30px;
 }
 @media screen and (max-width: 1025px) {
   .lesBoutons3 {
@@ -11218,7 +11230,6 @@ i {
 @media screen and (max-width: 569px) {
   .lesBoutons3 {
     font-size: 20px;
-    margin-top: 10px;
   }
 }
 
@@ -11227,7 +11238,6 @@ i {
   border: 1px solid black;
   border-radius: 50px;
   position: relative;
-  margin: 0 30px;
 }
 @media screen and (max-width: 1025px) {
   .lesBoutons4 {
@@ -11247,17 +11257,107 @@ i {
 @media screen and (max-width: 569px) {
   .lesBoutons4 {
     font-size: 20px;
-    margin-top: 10px;
+  }
+}
+
+.lesBoutons5 {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 1025px) {
+  .lesBoutons5 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .lesBoutons5 {
+    display: unset;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons5 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons5 {
+    font-size: 20px;
+  }
+}
+
+.lesBoutons6 {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 1025px) {
+  .lesBoutons6 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .lesBoutons6 {
+    display: unset;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons6 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons6 {
+    font-size: 20px;
+  }
+}
+
+.lesBoutons7 {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50px;
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 1025px) {
+  .lesBoutons7 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .lesBoutons7 {
+    display: unset;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons7 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 569px) {
+  .lesBoutons7 {
+    font-size: 20px;
   }
 }
 
 .carousel_action_btn {
   position: absolute;
   bottom: 5%;
-  width: 50%;
-  transform: translateX(50%);
+  width: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 769px) {
+  .carousel_action_btn {
+    width: 80%;
+    justify-content: space-between;
+  }
 }
 .nomHot {
   margin-top: 150px;
