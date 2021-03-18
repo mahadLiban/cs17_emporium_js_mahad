@@ -1,72 +1,142 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Projet</title>
-    
-    <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
     <!-- Fontawesome -->
     <link rel="stylesheet" type="text/css" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- Styles personnalisés -->
     <link rel="stylesheet" type="text/css" href="./public/css/style.css">
 </head>
+
 <body>
     <!-- Début du Header-->
-    <header>
+    <header class="d-flex flex-column align-items-center bg-white">
         <div>
             <h1 class="text-center py-3 pt-5">emporium.</h1>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light ">
 
             <div class="container-fluid d-flex justify-content-between">
-                <a class="navbar-brand d-none" href="#">emporium.
-                </a>
-                
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 monModeNuit">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">PRODUCT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">BLOG</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">ELEMENTS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
-                  </li>
-                  <!-- mode nuit -->
-                  <li id="modeNuit">
-                        <input type="checkbox" class="checkbox" id="checkbox">
-                        <label for="checkbox" class="label">
-                            <i class="fas fa-moon"></i>
-                            <i class="fas fa-sun"></i>
-                            <div class="ball"></div>
-                        </label>
-                    </li>
-                    <li>
-                        <button id="monBtn">CONNEXION</button>
-                    </li>
-                </ul>
-                
-              </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 monModeNuit">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">PRODUCT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ELEMENTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
+                        </li>
+                        <!-- mode nuit -->
+                        <li id="modeNuit">
+                            <input type="checkbox" class="checkbox" id="checkbox">
+                            <label for="checkbox" class="label">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </li>
+                        <li>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="py-1 border border-secondary bg-secondary text-light"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">Connexion</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-bottom border-white">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="w-100 d-flex justify-content-around">
+                                                <h2 class="cursorPointer mb-5 signUp ">Sign Up</h2>
+                                                <h2 class="cursorPointer mb-5 register">Register</h2>
+                                            </div>
+                                            <div class="w-100 d-flex justify-content-between">
+                                                <div class="w-50 left d-flex flex-column">
+                                                    <input style="height: 35px; width: 50%;"
+                                                        class="border border-light ms-3" type="email" name="email"
+                                                        id="email" placeholder="Email Adress">
+                                                    <input style="height: 35px; width: 50%;"
+                                                        class="mt-2 border border-light ms-3" type="password" name="pw"
+                                                        id="pw" placeholder="Password">
+                                                    <button type="button"
+                                                        class="ms-3 mt-2 py-1 border border-modalTurquoise bg-modalTurquoise rounded text-light w-50 bg-success">Sign
+                                                        up </button>
+                                                    <button type="button"
+                                                        class="ms-5 mt-5 py-1 border border-modalRed bg-modalRed rounded text-light bg-danger">Connect
+                                                        with Google</button>
+                                                    <button type="button"
+                                                        class="ms-5 mt-2 py-1 border border-modalBlue bg-modalBlue rounded text-light bg-primary">Connect
+                                                        with Facebook</button>
+                                                </div>
+
+                                                <div class="right invisible d-flex flex-column">
+                                                    <div class="d-flex">
+                                                        <input style="height: 35px; width: 50%;"
+                                                            class="border border-light ms-3" type="text"
+                                                            name="FirstName" id="firstName" placeholder="First name">
+                                                        <input style="height: 35px; width: 50%;"
+                                                            class=" border border-light ms-3" type="text" name="nom"
+                                                            id="nom" placeholder="Name">
+                                                    </div>
+                                                    <input style="height: 35px; width: 50%;"
+                                                        class="border border-light ms-3 mt-2" type="email" name="email"
+                                                        id="email" placeholder="Email Adress">
+                                                    <div class="d-flex">
+                                                        <input style="height: 35px; width: 50%;"
+                                                            class=" border border-light ms-3 mt-2" type="password"
+                                                            name="pw" id="pw" placeholder="Confirm password">
+                                                        <input style="height: 35px; width: 50%;"
+                                                            class=" border border-light ms-3 mt-2" type="password"
+                                                            name="pw" id="pw" placeholder="Password">
+                                                    </div>
+                                                    <button type="button"
+                                                        class="ms-3 mt-3 py-1 border border-modalTurquoise bg-modalTurquoise rounded text-light w-50 bg-success">Register</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fin Modal -->
+
+                        </li>
+                    </ul>
+
+                </div>
             </div>
-          </nav>
+        </nav>
+        <div id="placeHolder">
+
+        </div>
         <!-- Fin du NavBar -->
     </header>
+
     <!-- Fin du Header -->
 
     <!-- Début du Main-->
@@ -75,11 +145,13 @@
             <div class="container ">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="container m-5">
-                           <span id="maFontSection1" class="text-danger">Shop at</span>
-                           <p id="maFontSection2" >emporium.</p> 
-                           <p class="text-secondary">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my.</p>
-                           <button type="button" class="btn btn-danger monBtnSale"><span id="monSale">SALE ITEMS</span></button>
+                        <div class="container m-5 monFistMedia">
+                            <span id="maFontSection1" class="text-danger">Shop at</span>
+                            <p id="maFontSection2">emporium.</p>
+                            <p class="text-secondary">A wonderful serenity has taken possession of my entire soul, like
+                                these sweet mornings of spring which i enjoy with my.</p>
+                            <button type="button" class="btn btn-danger monBtnSale"><span id="monSale">SALE
+                                    ITEMS</span></button>
 
                         </div>
                     </div>
@@ -100,14 +172,14 @@
                 <div class="col-sm-4">
                     <div class="secondImg monCentrage">
                         <h3 class="text-white text-center border-bottom border-2 w-75  ">Sale Items</h3>
-                
+
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="thirdImg monCentrage ">
                         <h3 class="text-white text-center border-bottom border-2 w-75 ">Clothes</h3>
                     </div>
-                </div>  
+                </div>
             </div>
         </section>
         <!-- Recents products -->
@@ -115,60 +187,108 @@
             <div class="container">
                 <p class="mt-5 mb-5 text-center "><b>Recents Products</b></p>
                 <div class="row">
-                    <div class="col-sm-4 monAfter">
-                        <img class="img-fluid mb-3  imgGlove" src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                    <div class="col-sm-4">
+
+                        <div class="monBefore monAfter">
+                            <img class="img-fluid mb-3  imgGlove"
+                                src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                        </div>
                         <p class="text-center "> Luxury Sofa</p>
                         <p class="text-center mb-5"><span class="text-danger">$600.00</span></p>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-fluid mb-3" src="./public/img/products_mini/product-gloves.jpg" alt="">
-                        <p class="text-center ">Leather Gloves</p>
-                        <p class="text-center mb-5 "> <span class="maPastille">SALE!</span> <span class="text-secondary
-                            monPrix">$34.00</span><span class="text-danger">$27.00</span></p>
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-gloves.jpg"
+                                alt="">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="button" class="btn btn-danger rounded-circle mt-4 "
+                                style="height: 75px; width: 75px;">SALE!</button>
+                            <div class="ms-4">
+                                <p class="fw-bold text-center mt-4 d-block">Leather Gloves</p>
+                                <span class="text-center text-danger fw-bold "> <del class="text-secondary">$34.00</del>
+                                    $27.00</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-4">
-                        <img class="img-fluid mb-3" src="./public/img/products_mini/product-cups.jpg" alt="">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-cups.jpg"
+                                alt="">
+                        </div>
                         <p class="text-center ">Colorful Bowl</p>
                         <p class="text-center mb-5"><span class="text-danger">$18.00</span></p>
                     </div>
                 </div>
-                
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-bag.jpg" alt="">
-                            <p class="text-center "> Women Bag</p>
-                            <p class="text-center mb-5 "> <span class="maPastille">SALE!</span> <span class="text-secondary
-                                monPrix">*420.00</span><span class="text-danger">$350.00</span></p>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-bag.jpg"
+                                alt="">
                         </div>
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-tshitr.jpg" alt="">
-                            <p class="text-center ">Minimal T-shirt</p>
-                        <p class="text-center mb-5"><span class="text-danger">$15.00</span></p>
-                        </div>
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-plates.jpg" alt="">
-                            <p class="text-center ">Plates Set</p>
-                        <p class="text-center mb-5"><span class="text-danger">$30.00</span></p>
+                        <div class="d-flex justify-content-center align-items-center myGalerie">
+                            <button type="button" class="btn btn-danger rounded-circle mt-4 "
+                                style="height: 75px; width: 75px;">SALE!</button>
+                            <div class="ms-4">
+                                <p class="fw-bold text-center mt-4 d-block">Women Bag</p>
+                                <span class="text-center text-danger fw-bold "> <del
+                                        class="text-secondary">$420.00</del>
+                                    $350.00</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
-                            <p class="text-center ">Modern Sofa</p>
-                        <p class="text-center mb-5"><span class="text-danger">$900.00</span></p>
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-tshitr.jpg"
+                                alt="">
                         </div>
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-bed.jpg" alt="">
-                            <p class="text-center ">Bed Linen</p>
-                        <p class="text-center mb-5"><span class="text-danger">$79.00</span></p>
+                        <p class="text-center ">Minimal T-shirt</p>
+                        <p class="text-center mb-5"><span class="text-danger">$15.00</span></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-plates.jpg"
+                                alt="">
                         </div>
-                        <div class="col-sm-4">
-                            <img class="img-fluid mb-3" src="./public/img/products_mini/product-shoes.jpg" alt="">
-                            <p class="text-center ">Minimal Shoes</p>
-                        <p class="text-center mb-5"><span class="text-danger">$60.00</span></p>
-                        </div>
+                        <p class="text-center ">Plates Set</p>
+                        <p class="text-center mb-5"><span class="text-danger">$30.00</span></p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove"
+                                src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                        </div>
+                        <p class="text-center ">Modern Sofa</p>
+                        <p class="text-center mb-5"><span class="text-danger">$900.00</span></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-bed.jpg"
+                                alt="">
+                        </div>
+                        <p class="text-center ">Bed Linen</p>
+                        <p class="text-center mb-5"><span class="text-danger">$79.00</span></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="monBefore monAfter">
+
+                            <img class="img-fluid mb-3 imgGlove" src="./public/img/products_mini/product-shoes.jpg"
+                                alt="">
+                        </div>
+                        <p class="text-center ">Minimal Shoes</p>
+                        <p class="text-center mb-5"><span class="text-danger">$60.00</span></p>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
         <section class="section3">
@@ -184,190 +304,170 @@
 
         <section>
             <!-- carouselle -->
-        <h3 class="text-center mt-5 monHot">Hot Fashion Products</h3>
-    <div class="carousel1 ">
-        <div class="carousel_itemx image">
-            <p class="nomHot">Luxury Sofa</p>
-            <p class="prixHot text-danger">$600.00</p>
-        </div>
-        <div class="carousel_itemx image1">
-            <p class="nomHot">Leather Gloves</p>
-            <p class="prixHot "> <span class="maPastille1 ">SALE!</span> <span class="text-secondary
+            <h3 class="text-center mt-5 monHot">Hot Fashion Products</h3>
+            <div class="carousel1 ">
+                <div class="carousel_itemx image">
+                    <p class="nomHot">Luxury Sofa</p>
+                    <p class="prixHot text-danger">$600.00</p>
+                </div>
+                <div class="carousel_itemx image1">
+                    <p class="nomHot">Leather Gloves</p>
+                    <p class="prixHot "> <button class="maPastille1 ">SALE!</button> <span class="text-secondary
                 monPrix">$34.00</span><span class="text-danger">$27.00</span></p>
 
-        </div>
-        <div class="carousel_itemx image2">
-            <p class="nomHot">Colorful Bowl</p>
-            <p class="prixHot text-danger">$18.00</p>
+                </div>
+                <div class="carousel_itemx image2">
+                    <p class="nomHot">Colorful Bowl</p>
+                    <p class="prixHot text-danger">$18.00</p>
 
 
-        </div>
-        <div class="carousel_itemx image3">
-            <p class="nomHot">Women bag</p>
-            <p class="prixHot "> <span class="maPastille1 ">SALE!</span> <span class="text-secondary
+                </div>
+                <div class="carousel_itemx image3">
+                    <p class="nomHot">Women bag</p>
+                    <p class="prixHot "> <button class="maPastille1 ">SALE!</button> <span class="text-secondary
                 monPrix">$420.00</span><span class="text-danger">$350.00</span></p>
 
-        </div>
-        <div class="carousel_itemx image4">
-            <p class="nomHot">Minimal T-Shirt</p>
-            <p class="prixHot text-danger">$15.00</p>
+                </div>
+                <div class="carousel_itemx image4">
+                    <p class="nomHot">Minimal T-Shirt</p>
+                    <p class="prixHot text-danger">$15.00</p>
 
-        </div>
-        <div class="carousel_itemx image5">
-            <p class="nomHot">Plates Set</p>
-            <p class="prixHot text-danger">$30.00</p>
+                </div>
+                <div class="carousel_itemx image5">
+                    <p class="nomHot">Plates Set</p>
+                    <p class="prixHot text-danger">$30.00</p>
 
 
-        </div>
-        <div class="carousel_itemx image6">
-            <p class="nomHot">Modern Sofa</p>
-            <p class="prixHot text-danger">$900.00</p>
+                </div>
+                <div class="carousel_itemx image6">
+                    <p class="nomHot">Modern Sofa</p>
+                    <p class="prixHot text-danger">$900.00</p>
 
-        </div>
-        <!-- btn caro -->
-        <div class="carousel_action_btn">
-            <button class="lesBoutons1 lesBtn"></button>
-            <button class="lesBoutons2  lesBtn"></button>
-            <button class="lesBoutons3 lesBtn"></button>
-            <button class="lesBoutons4 lesBtn"></button>
-            <button class="lesBoutons5  lesBtn"></button>
-            <button class="lesBoutons6 lesBtn"></button>
-            <button class="lesBoutons7 lesBtn"></button>
-        </div>
-    </div>
+                </div>
+                <!-- btn caro -->
+                <div class="carousel_action_btn">
+                    <button class="lesBoutons1 lesBtn"></button>
+                    <button class="lesBoutons2  lesBtn"></button>
+                    <button class="lesBoutons3 lesBtn"></button>
+                    <button class="lesBoutons4 lesBtn"></button>
+                    <button class="lesBoutons5  lesBtn"></button>
+                    <button class="lesBoutons6 lesBtn"></button>
+                    <button class="lesBoutons7 lesBtn"></button>
+                </div>
+            </div>
         </section>
         <!-- mes Cards -->
-    <section class="section4 container-fluid mt-5 mb-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card bg-secondary" style="width: 24rem;">
-                <i class="far fa-check-circle mt-5"></i>
-                <div class="card-body text-center">
-                  <h5 class="card-title">TRSUTED BY 10,000+ CUSTOMERS</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
-                  <a href="#" class="btn btn-dark">LEARN MORE</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-danger" style="width: 24rem;">
-                    <i class="fas fa-paper-plane mt-5"></i>
-
-                <div class="card-body text-center">
-                  <h5 class="card-title">VERY FAST SHIPPING</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
-                  <a href="#" class="btn btn-light">LEARN MORE</a>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card bg-secondary " style="width: 24rem;">
-                    <i class="far fa-check-circle mt-5"></i>
-                    <div class="card-body text-center">
-                  <h5 class="card-title">TRSUTED BY 10,000+ CUSTOMERS</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
-                  <a href="#" class="btn btn-dark">LEARN MORE</a>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="okSaid">
-        <div class="container">
+        <section class="section4 container-fluid mt-5 mb-5 text-white">
             <div class="row">
-                <div class="col-md-4">
-                    <h4 class="text-white mesH4">ABOUT US</h4>
-                    <p class="monPcouleur">A wonderful serenity has taken possession of my entire soul,like these sweet mornings of spring which i enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of</p>
+                <div class="col-md-12 col-lg-4 ">
+                    <div class="card bg-secondary">
+                        <i class="far fa-check-circle mt-5"></i>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">TRSUTED BY 10,000+ CUSTOMERS</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                                quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
+                            <a href="#" class="btn btn-dark">LEARN MORE</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h4 class="text-white mesH4">RECENTS POSTS</h4>
-                    <p class="text-white">> Hello world</p>
-                    <p class="text-white">> Wonderful serenity has taken</p>
-                    <p class="text-white">> In my soul and absorb its power</p>
-                    <p class="text-white">> I hear the buzz of the little</p>
+                <div class="col-md-12 col-lg-4 ">
+                    <div class="card bg-danger">
+                        <i class="fas fa-paper-plane mt-5"></i>
+
+                        <div class="card-body text-center">
+                            <h5 class="card-title">VERY FAST SHIPPING</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                                quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
+                            <a href="#" class="btn btn-light">LEARN MORE</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <h4 class="text-white mesH4">TAG CLOUD</h4>
-                    <div class="row">
-                       <div class="col-md-3">
-                           <button type="button" class="btn btn-outline-secondary">business</button>
-                       </div>
-                       <div class="col-md-4">
-                           <button type="button" class="btn btn-outline-secondary">confidence</button>
-                       </div>
-                       <div class="col-md-3">
-                           <button type="button" class="btn btn-outline-secondary">gadgets</button>
-
-                       </div> 
-                    </div>
-                    <div class="row mt-2">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-outline-secondary">identity</button>
-
-                        </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn btn-outline-secondary">logo</button>
-
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-outline-secondary">photography</button>
-
+                <div class="col-md-12 col-lg-4">
+                    <div class="card bg-secondary ">
+                        <i class="far fa-check-circle mt-5"></i>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">TRSUTED BY 10,000+ CUSTOMERS</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+                                quibusdam voluptate provident quas magni excepturi maxime molestiae.</p>
+                            <a href="#" class="btn btn-dark">LEARN MORE</a>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-md-2">
-                            <button type="button" class="btn btn-outline-secondary">time</button>
-
-                        </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn btn-outline-secondary">trips</button>
-
-                        </div>
-                        <div class="col-md-2">
-                            <button type="button" class="btn btn-outline-secondary">works</button>
-
-                        </div>
-                        <div class="col-md-6">
-                            
-
-                        </div>
+                </div>
+            </div>
+        </section>
+        <footer class="okSaid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 ">
+                        <h4 class="text-white mesH4">ABOUT US</h4>
+                        <p class="monPcouleur">A wonderful serenity has taken possession of my entire soul,like these
+                            sweet mornings of spring which i enjoy with my whole heart. I am alone, and feel the charm
+                            of existence in this spot, which was created for the bliss of</p>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col-md-6 mb-3">
-                            <button type="button" class="btn btn-outline-secondary w-100">work space</button>
+                    <div class="col-lg-4">
+                        <h4 class="text-white mesH4">RECENTS POSTS</h4>
+                        <p class="text-white">> Hello world</p>
+                        <p class="text-white">> Wonderful serenity has taken</p>
+                        <p class="text-white">> In my soul and absorb its power</p>
+                        <p class="text-white">> I hear the buzz of the little</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4 class="text-white mesH4">TAG CLOUD</h4>
 
-                        </div>
-                        <div class="col-md-4">
-                            
+                        <button type="button" class="btn btn-outline-secondary mx-1">business</button>
 
-                        </div>
-                        <div class="col-md-4">
-                           
-                        </div>
+                        <button type="button" class="btn btn-outline-secondary mx-1">confidence</button>
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">gadgets</button>
+
+
+
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">identity</button>
+
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">logo</button>
+
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">photography</button>
+
+
+
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">time</button>
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">trips</button>
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">works</button>
+
+
+                        <button type="button" class="btn btn-outline-secondary mx-1">work space</button>
+
+
                     </div>
 
                 </div>
             </div>
-        </div>
-        <div class="basFooter text-center p-4">
-            <span class="text-white">© JOU M'OUPILL MoUHaD, ALL RIGHT RESERVED ©</span>
-        </div>
-    </footer>
+            </div>
+            <div class="basFooter text-center p-4">
+                <span class="text-white">© JOU M'OUPILL MoUHaD, ALL RIGHT RESERVED ©</span>
+            </div>
+        </footer>
     </main>
-    <!-- Fin du Main-->
 
-    <!-- Début du Footer-->
-    <footer>
-
-    </footer>
-    <!-- Fin du Footer-->
 
     <!-- Début du Scripts -->
-    
-    
+
     <!-- JavaScript Bundle with Popper -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="module" src="./public/js/main.js"></script>
     <!-- Fin du Scripts -->
 </body>
+
 </html>
